@@ -1,0 +1,6 @@
+{
+  "schooleduniforms.commands.uniform.already_not_tracking": "Nothing changed. That objective is already not being tracked for uniforms.",
+  "schooleduniforms.commands.uniform.already_tracking": "Nothing changed. That objective is already being tracked for uniforms.",
+  "schooleduniforms.commands.uniform.start_tracking": "Set objective %s to be tracked by player uniforms.",
+  "schooleduniforms.commands.uniform.stop_tracking": "Set objective %s to not be tracked by player uniforms."
+}

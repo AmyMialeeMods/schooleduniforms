@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.amymialee.schooleduniforms.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "ServerScoreboardMixin"
+  ],
+  "client": [
+    "PostPassMixin",
+    "UniformValueMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "schooleduniforms",
+  "version": "${version}",
+
+  "name": "Schooled Uniforms",
+  "description": "Teach the uniforms some lessons.",
+  "authors": [
+    "AmyMialee"
+  ],
+  "contact": {
+    "homepage": "https://www.amymialee.dev/"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/schooleduniforms/icon.png",
+
+  "accessWidener" : "schooleduniforms.accesswidener",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.amymialee.schooleduniforms.SchooledUniformsDataGenerator"
+    ],
+    "client": [
+      "dev.amymialee.schooleduniforms.SchooledUniformsClient"
+    ],
+    "main": [
+      "dev.amymialee.schooleduniforms.SchooledUniforms"
+    ],
+    "cardinal-components": [
+      "dev.amymialee.schooleduniforms.SchooledUniforms"
+    ]
+  },
+  "mixins": [
+    "schooleduniforms.mixins.json"
+  ],
+
+  "depends": {
+    "fabric-api": "*"
+  },
+
+  "custom": {
+    "cardinal-components": [
+      "schooleduniforms:extratracking"
+    ],
+    "loom:injected_interfaces": {},
+    "modmenu": {
+      "links": {
+        "modmenu.website": "https://amymialee.dev",
+        "modmenu.patreon": "https://www.patreon.com/cw/AmyMialee",
+        "modmenu.discord": "https://discord.amymialee.dev"
+      }
+    }
+  }
+}
