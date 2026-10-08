@@ -5,6 +5,7 @@ import com.mojang.blaze3d.buffers.Std140Builder;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.renderpearl.api.buffers.GpuBuffer;
 import com.mojang.renderpearl.api.device.GpuDevice;
+import dev.amymialee.schooleduniforms.SchooledUniforms;
 import dev.amymialee.schooleduniforms.api.special.HookedUniform;
 import net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionContext;
 import net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionEvents;
@@ -26,7 +27,7 @@ public interface HookedUniformManager {
     @ApiStatus.Internal record HookedBuffer(String name, int size, List<UniformValue> uniforms, GpuBuffer buffer) {}
 
     static void init() {
-        LevelExtractionEvents.END_EXTRACTION.register(context -> {
+        LevelExtractionEvents.END_EXTRACTION.register(SchooledUniforms.id("write"), context -> {
             var closed = new HashSet<String>();
             for (var hookedBuffer : HOOKED_BUFFERS.values()) {
                 if (hookedBuffer.buffer.isClosed()) {
