@@ -9,7 +9,7 @@ base { archivesName = project.mod_id + "-" + project.minecraft_version }
 
 fabricApi {
     configureDataGeneration {
-        modId = "schooleduniforms"
+        modId = project.mod_id
         client = true
     }
 }
